@@ -57,11 +57,12 @@
           </div>
           <div class="terminal-body">
             <p><span class="muted">provider</span><strong>OpenRouter</strong></p>
-            <p><span class="muted">models</span><strong>meta/muse* · live</strong></p>
+            <p><span class="muted">models</span><strong>4 visible · live</strong></p>
             <p><span class="muted">harness</span><strong>Meta Muse Code</strong></p>
             <div class="checks">
               <span><i>✓</i> text inference</span>
               <span><i>✓</i> native tool calls</span>
+              <span><i>✓</i> model picker</span>
               <span><i>✓</i> private key storage</span>
             </div>
             <p class="run"><span>›</span> muse</p>
@@ -73,7 +74,7 @@
         <p>Normal command</p><strong>muse</strong>
         <p>Credential file</p><strong>mode 0600</strong>
         <p>Adapter bind</p><strong>127.0.0.1 only</strong>
-        <p>Model catalog</p><strong>live meta/muse*</strong>
+        <p>Model catalog</p><strong>Glimmer + Spark</strong>
       </section>
 
       <section class="why shell section">
@@ -89,7 +90,7 @@
         <ol class="issues">
           <li>
             <span>01</span>
-            <div><h3>Live catalog translation</h3><p>Muse’s proprietary <code>/muse-code/models</code> request is backed by every OpenRouter <code>meta/muse*</code> record.</p></div>
+            <div><h3>Visible model picker</h3><p>Every live OpenRouter <code>meta/muse*</code> record is translated into a visible Muse catalog row, so Glimmer and Spark can be selected normally.</p></div>
           </li>
           <li>
             <span>02</span>
@@ -122,7 +123,7 @@
         </div>
         <div class="detail-grid">
           <article><h3>Private</h3><p>The key is stored in a user-only credential file. Authorization headers, prompts, and responses are never logged.</p></article>
-          <article><h3>Native</h3><p>Keep using <code>muse</code>, or select a live model per run with <code>muse --model meta/muse-…</code>.</p></article>
+          <article><h3>Selectable</h3><p>Choose the default during install, reopen the chooser with <code>muse-openrouter select</code>, or select per run with <code>muse --model meta/muse-…</code>.</p></article>
           <article><h3>Portable</h3><p>A dependency-free Python wheel supports Linux and macOS. The installer uses PyPI with a checksum-pinned fallback.</p></article>
         </div>
       </section>
@@ -135,7 +136,7 @@
           <code id="install-command-bottom">curl -LsSf https://xhluca.github.io/muse-code-openrouter/install.sh | sh</code>
           <button class="copy" type="button" data-copy="install-command-bottom" aria-label="Copy install command">Copy</button>
         </div>
-        <p class="fine">The installer prompts for the key without echoing it. Run <code>muse-openrouter models</code> to list the live catalog. Contributor models remain subject to OpenRouter privacy settings and Meta’s data-use terms.</p>
+        <p class="fine">The installer prompts for the key without echoing it, then shows a numbered model chooser. Run <code>muse-openrouter select</code> later to refresh and change the default. For Contributor models, <a href="https://openrouter.ai/meta/muse-spark-1.2-contributor">OpenRouter warns</a>: “Your prompts and outputs may be used to improve Meta's products.”</p>
       </section>
     </main>
 
