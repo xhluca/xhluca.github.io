@@ -20,14 +20,14 @@ const player = document.getElementById("demo-player");
 
 if (player && window.AsciinemaPlayer) {
   player.textContent = "";
-  window.AsciinemaPlayer.create("assets/demo.cast?v=3", player, {
+  window.AsciinemaPlayer.create("assets/demo.cast?v=4", player, {
     autoPlay: true,
     controls: true,
     fit: "width",
     loop: true,
     poster: "npt:0:00",
     speed: 1,
-    terminalFontSize: "small",
+    terminalFontSize: "30px",
     theme: "dracula"
   });
 }

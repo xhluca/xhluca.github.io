@@ -120,7 +120,9 @@ h1 {
 .install button.copied { background: var(--text); }
 
 .demo {
-  margin: 34px 0 28px;
+  width: min(1600px, calc(100vw - 40px));
+  margin: 34px 0 28px 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   background: #0a0c0b;
   border: 1px solid var(--line);
@@ -128,7 +130,7 @@ h1 {
   box-shadow: 0 24px 70px rgba(0, 0, 0, .25);
 }
 
-.demo #demo-player { min-height: 360px; }
+.demo #demo-player { min-height: 620px; }
 .demo .ap-wrapper { border: 0; }
 .demo .ap-player { max-width: none; }
 .demo .ap-terminal { background: #0a0c0b; }
@@ -173,5 +175,8 @@ h1 {
   .install { grid-template-columns: 1fr; }
   .install code { padding: 6px 4px; }
   .install button { width: 100%; }
-  .demo #demo-player { min-height: 250px; }
+  .demo {
+    width: calc(100vw - 28px);
+  }
+  .demo #demo-player { min-height: 300px; }
 }
