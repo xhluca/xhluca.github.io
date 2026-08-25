@@ -83,7 +83,7 @@
           <h2>Muse speaks a dialect OpenRouter doesn’t.</h2>
           <p>
             Muse exposes a base URL, but its shipped OpenRouter provider is disabled.
-            A direct key fails before the first token. The adapter resolves the three
+            A direct key fails before the first token. The adapter resolves the four
             protocol mismatches without modifying Meta’s binary.
           </p>
         </div>
@@ -100,6 +100,10 @@
             <span>03</span>
             <div><h3>Credential handoff</h3><p>Your OpenRouter key stays outside Muse’s Meta login store and is supplied only to OpenRouter.</p></div>
           </li>
+          <li>
+            <span>04</span>
+            <div><h3>Safe model switching</h3><p>When you switch models mid-session, encrypted reasoning from the old model is removed while visible conversation and tool history are preserved.</p></div>
+          </li>
         </ol>
       </section>
 
@@ -108,7 +112,7 @@
         <div class="flow-line" aria-label="Muse to local adapter to OpenRouter to Muse Spark">
           <div><small>01</small><strong>Muse Code</strong><span>native agent + tools</span></div>
           <i aria-hidden="true">→</i>
-          <div class="active"><small>02</small><strong>Local adapter</strong><span>catalog + SSE repair</span></div>
+          <div class="active"><small>02</small><strong>Local adapter</strong><span>catalog + replay repair</span></div>
           <i aria-hidden="true">→</i>
           <div><small>03</small><strong>OpenRouter</strong><span>your key + billing</span></div>
           <i aria-hidden="true">→</i>
@@ -123,7 +127,7 @@
         </div>
         <div class="detail-grid">
           <article><h3>Private</h3><p>The key is stored in a user-only credential file. Authorization headers, prompts, and responses are never logged.</p></article>
-          <article><h3>Selectable</h3><p>Choose the default during install, reopen the chooser with <code>muse-openrouter select</code>, or select per run with <code>muse --model meta/muse-…</code>.</p></article>
+          <article><h3>Selectable</h3><p>Choose the default during install, reopen the chooser with <code>muse-openrouter select</code>, select per run with <code>muse --model meta/muse-…</code>, or switch safely in-session with <code>/models</code>.</p></article>
           <article><h3>Portable</h3><p>A dependency-free Python wheel supports Linux and macOS. The installer uses PyPI with a checksum-pinned fallback.</p></article>
           <article><h3>Reversible</h3><p><code>muse-openrouter uninstall</code> stops the adapter, removes its credential, and restores Muse’s prior settings without deleting unrelated preferences.</p></article>
         </div>
