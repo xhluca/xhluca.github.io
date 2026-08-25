@@ -20,7 +20,7 @@ const player = document.getElementById("demo-player");
 
 if (player && window.AsciinemaPlayer) {
   player.textContent = "";
-  window.AsciinemaPlayer.create("assets/demo.cast?v=2", player, {
+  window.AsciinemaPlayer.create("assets/demo.cast?v=3", player, {
     autoPlay: true,
     controls: true,
     fit: "width",
