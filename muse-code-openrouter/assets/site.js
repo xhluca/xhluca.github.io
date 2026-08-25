@@ -16,12 +16,19 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
   });
 });
 
-const demo = document.querySelector("[data-demo]");
-const replay = document.querySelector("[data-replay]");
+const player = document.getElementById("demo-player");
 
-replay?.addEventListener("click", () => {
-  const body = demo?.querySelector(".demo-body");
-  if (body) {
-    body.replaceWith(body.cloneNode(true));
-  }
-});
+if (player && window.AsciinemaPlayer) {
+  player.textContent = "";
+  window.AsciinemaPlayer.create("assets/demo.cast", player, {
+    autoPlay: true,
+    controls: true,
+    fit: "width",
+    idleTimeLimit: 2,
+    loop: true,
+    poster: "npt:0:00",
+    speed: 1,
+    terminalFontSize: "small",
+    theme: "asciinema"
+  });
+}

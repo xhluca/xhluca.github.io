@@ -15,7 +15,8 @@
     <meta name="twitter:description" content="Bring your own API key to Meta Muse Code.">
     <meta name="twitter:image" content="https://xhluca.github.io/muse-code-openrouter/og.png">
     <link rel="canonical" href="https://xhluca.github.io/muse-code-openrouter/">
-    <link rel="stylesheet" href="assets/site.css">
+    <link rel="stylesheet" href="assets/asciinema-player.css">
+    <link rel="stylesheet" href="assets/site.css?v=4">
     <title>Muse Code OpenRouter — Bring your own API key</title>
   </head>
   <body>
@@ -41,28 +42,12 @@
           <button type="button" data-copy="install-command" aria-label="Copy install command">Copy</button>
         </div>
 
-        <section class="demo playing" data-demo aria-label="Muse model switching demonstration">
-          <div class="demo-bar">
-            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>muse</span>
-            <button class="replay" type="button" data-replay aria-label="Replay model switching demo" title="Replay">↻</button>
-          </div>
-          <div class="demo-body" aria-live="polite">
-            <p class="demo-line"><b>$</b> curl -LsSf https://xhluca.github.io/muse-code-openrouter/install.sh | sh</p>
-            <p class="demo-line muted">✓ Installed <strong>muse-code-openrouter</strong></p>
-            <p class="demo-line muted">OpenRouter API key: ••••••••••••</p>
-            <p class="demo-line muted">Choose a default: 1) Spark 1.2&nbsp;&nbsp; 2) Glimmer 30B</p>
-            <p class="demo-line muted">✓ Selected <strong>meta/muse-spark-1.2</strong></p>
-            <p class="demo-line"><b>$</b> muse</p>
-            <p class="demo-line muted">Model set to <strong>meta/muse-spark-1.2</strong> · OpenRouter</p>
-            <p class="demo-line"><b>›</b> hello</p>
-            <p class="demo-line response">◆ Hi — how can I help?</p>
-            <p class="demo-line"><b>›</b> /models</p>
-            <p class="demo-line switch">Model set to <strong>meta/muse-glimmer-30b</strong> · OpenRouter</p>
-            <p class="demo-line"><b>›</b> continue this conversation</p>
-            <p class="demo-line response">◆ Still here — now using Glimmer.</p>
+        <section class="demo" aria-label="Real Muse Code OpenRouter terminal recording">
+          <div id="demo-player">
+            <a href="assets/demo.cast">Open the terminal recording</a>
           </div>
         </section>
+        <p class="demo-caption">Real installer · live OpenRouter requests · Spark → Glimmer in one session</p>
         <p class="demo-formats">Rendered versions: <a href="assets/demo.gif">GIF</a> · <a href="assets/demo.mp4">MP4</a></p>
 
         <p class="usage">
@@ -82,6 +67,7 @@
         <a href="install.sh">View installer</a>
       </footer>
     </div>
-    <script src="assets/site.js?v=3"></script>
+    <script src="assets/asciinema-player.min.js"></script>
+    <script src="assets/site.js?v=4"></script>
   </body>
 </html>
