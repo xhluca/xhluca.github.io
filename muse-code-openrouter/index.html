@@ -41,6 +41,25 @@
           <button type="button" data-copy="install-command" aria-label="Copy install command">Copy</button>
         </div>
 
+        <section class="demo playing" data-demo aria-label="Muse model switching demonstration">
+          <div class="demo-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>muse</span>
+            <button class="replay" type="button" data-replay aria-label="Replay model switching demo" title="Replay">↻</button>
+          </div>
+          <div class="demo-body" aria-live="polite">
+            <p class="demo-line step-1"><b>$</b> muse --model meta/muse-spark-1.2</p>
+            <p class="demo-line step-2 muted">Model set to <strong>meta/muse-spark-1.2</strong> · OpenRouter</p>
+            <p class="demo-line step-3"><b>›</b> hello</p>
+            <p class="demo-line step-4 response">◆ Hi — how can I help?</p>
+            <p class="demo-line step-5"><b>›</b> /models</p>
+            <p class="demo-line step-6 switch">Model set to <strong>meta/muse-glimmer-30b</strong> · OpenRouter</p>
+            <p class="demo-line step-7"><b>›</b> continue this conversation</p>
+            <p class="demo-line step-8 response">◆ Still here — now using Glimmer.</p>
+            <p class="demo-line step-9 success">✓ Model switched · conversation preserved · no 404</p>
+          </div>
+        </section>
+
         <p class="usage">
           Switch models with <code>/models</code>. Check setup with
           <code>muse-openrouter doctor --live</code>. Revert everything with
@@ -58,6 +77,6 @@
         <a href="install.sh">View installer</a>
       </footer>
     </div>
-    <script src="assets/site.js"></script>
+    <script src="assets/site.js?v=2"></script>
   </body>
 </html>

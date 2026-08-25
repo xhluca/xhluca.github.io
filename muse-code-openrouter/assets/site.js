@@ -15,3 +15,13 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
     }
   });
 });
+
+const demo = document.querySelector("[data-demo]");
+const replay = document.querySelector("[data-replay]");
+
+replay?.addEventListener("click", () => {
+  const body = demo?.querySelector(".demo-body");
+  if (body) {
+    body.replaceWith(body.cloneNode(true));
+  }
+});
