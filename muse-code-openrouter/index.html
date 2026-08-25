@@ -48,17 +48,22 @@
             <button class="replay" type="button" data-replay aria-label="Replay model switching demo" title="Replay">↻</button>
           </div>
           <div class="demo-body" aria-live="polite">
-            <p class="demo-line step-1"><b>$</b> muse --model meta/muse-spark-1.2</p>
-            <p class="demo-line step-2 muted">Model set to <strong>meta/muse-spark-1.2</strong> · OpenRouter</p>
-            <p class="demo-line step-3"><b>›</b> hello</p>
-            <p class="demo-line step-4 response">◆ Hi — how can I help?</p>
-            <p class="demo-line step-5"><b>›</b> /models</p>
-            <p class="demo-line step-6 switch">Model set to <strong>meta/muse-glimmer-30b</strong> · OpenRouter</p>
-            <p class="demo-line step-7"><b>›</b> continue this conversation</p>
-            <p class="demo-line step-8 response">◆ Still here — now using Glimmer.</p>
-            <p class="demo-line step-9 success">✓ Model switched · conversation preserved · no 404</p>
+            <p class="demo-line"><b>$</b> curl -LsSf https://xhluca.github.io/muse-code-openrouter/install.sh | sh</p>
+            <p class="demo-line muted">✓ Installed <strong>muse-code-openrouter</strong></p>
+            <p class="demo-line muted">OpenRouter API key: ••••••••••••</p>
+            <p class="demo-line muted">Choose a default: 1) Spark 1.2&nbsp;&nbsp; 2) Glimmer 30B</p>
+            <p class="demo-line muted">✓ Selected <strong>meta/muse-spark-1.2</strong></p>
+            <p class="demo-line"><b>$</b> muse</p>
+            <p class="demo-line muted">Model set to <strong>meta/muse-spark-1.2</strong> · OpenRouter</p>
+            <p class="demo-line"><b>›</b> hello</p>
+            <p class="demo-line response">◆ Hi — how can I help?</p>
+            <p class="demo-line"><b>›</b> /models</p>
+            <p class="demo-line switch">Model set to <strong>meta/muse-glimmer-30b</strong> · OpenRouter</p>
+            <p class="demo-line"><b>›</b> continue this conversation</p>
+            <p class="demo-line response">◆ Still here — now using Glimmer.</p>
           </div>
         </section>
+        <p class="demo-formats">Rendered versions: <a href="assets/demo.gif">GIF</a> · <a href="assets/demo.mp4">MP4</a></p>
 
         <p class="usage">
           Switch models with <code>/models</code>. Check setup with
@@ -77,6 +82,6 @@
         <a href="install.sh">View installer</a>
       </footer>
     </div>
-    <script src="assets/site.js?v=2"></script>
+    <script src="assets/site.js?v=3"></script>
   </body>
 </html>

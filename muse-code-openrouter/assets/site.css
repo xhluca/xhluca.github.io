@@ -167,7 +167,7 @@ h1 {
 }
 
 .demo-body {
-  min-height: 326px;
+  min-height: 468px;
   padding: 22px;
   font: 13px/1.55 "SFMono-Regular", Consolas, monospace;
 }
@@ -183,22 +183,29 @@ h1 {
 .demo-line.muted { padding-left: 18px; color: #7e867f; }
 .demo-line.response { color: #cbd0cb; }
 .demo-line.switch { margin-top: 21px; padding-left: 18px; color: #91a692; }
-.demo-line.success {
-  margin-top: 20px;
-  padding-top: 16px;
-  color: var(--accent);
-  border-top: 1px solid var(--line);
-}
+.demo-line:nth-child(1) { --delay: .10s; }
+.demo-line:nth-child(2) { --delay: .45s; }
+.demo-line:nth-child(3) { --delay: .80s; }
+.demo-line:nth-child(4) { --delay: 1.15s; }
+.demo-line:nth-child(5) { --delay: 1.50s; }
+.demo-line:nth-child(6) { --delay: 1.95s; }
+.demo-line:nth-child(7) { --delay: 2.30s; }
+.demo-line:nth-child(8) { --delay: 2.65s; }
+.demo-line:nth-child(9) { --delay: 2.95s; }
+.demo-line:nth-child(10) { --delay: 3.35s; }
+.demo-line:nth-child(11) { --delay: 3.70s; }
+.demo-line:nth-child(12) { --delay: 4.05s; }
+.demo-line:nth-child(13) { --delay: 4.40s; }
+.demo.playing .demo-line { animation: reveal .25s ease var(--delay) forwards; }
 
-.demo.playing .step-1 { animation: reveal .25s ease .15s forwards; }
-.demo.playing .step-2 { animation: reveal .25s ease .55s forwards; }
-.demo.playing .step-3 { animation: reveal .25s ease .95s forwards; }
-.demo.playing .step-4 { animation: reveal .25s ease 1.35s forwards; }
-.demo.playing .step-5 { animation: reveal .25s ease 1.85s forwards; }
-.demo.playing .step-6 { animation: reveal .25s ease 2.25s forwards; }
-.demo.playing .step-7 { animation: reveal .25s ease 2.65s forwards; }
-.demo.playing .step-8 { animation: reveal .25s ease 3.05s forwards; }
-.demo.playing .step-9 { animation: reveal .3s ease 3.5s forwards; }
+.demo-formats {
+  margin: -14px 2px 28px;
+  color: #707770;
+  font: 11px/1.5 "SFMono-Regular", Consolas, monospace;
+  text-align: right;
+}
+.demo-formats a { color: var(--muted); }
+.demo-formats a:hover { color: var(--accent); }
 
 .note {
   margin-top: 38px;
@@ -229,7 +236,7 @@ h1 {
   .install { grid-template-columns: 1fr; }
   .install code { padding: 6px 4px; }
   .install button { width: 100%; }
-  .demo-body { min-height: 310px; padding: 18px 14px; font-size: 11px; }
+  .demo-body { min-height: 430px; padding: 18px 14px; font-size: 11px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
