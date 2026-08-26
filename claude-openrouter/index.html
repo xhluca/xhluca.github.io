@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d0f0e">
+    <meta name="description" content="Put your OpenRouter favorites directly in Claude Code's native model picker.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Claude OpenRouter">
+    <meta property="og:description" content="A small CLI that connects Claude Code to OpenRouter.">
+    <meta property="og:url" content="https://xhluca.github.io/claude-openrouter/">
+    <link rel="canonical" href="https://xhluca.github.io/claude-openrouter/">
+    <link rel="stylesheet" href="assets/site.css?v=1">
+    <title>Claude OpenRouter — OpenRouter models in Claude Code</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="name" href="./">Claude OpenRouter</a>
+        <nav aria-label="Project links">
+          <a href="https://github.com/xhluca/claude-openrouter">GitHub</a>
+          <a href="https://pypi.org/project/claude-openrouter/">PyPI</a>
+        </nav>
+      </header>
+
+      <main>
+        <p class="label">OpenRouter models in Claude Code</p>
+        <h1>Your models. Claude's picker.</h1>
+        <p class="intro">
+          Add OpenRouter favorites to Claude Code's native <code>/model</code>
+          menu with one small, local CLI. No proxy or background service.
+        </p>
+
+        <div class="install" aria-label="Installation command">
+          <code id="install-command">curl -LsSf https://xhluca.github.io/claude-openrouter/install.sh | sh</code>
+          <button type="button" data-copy="install-command" aria-label="Copy install command">Copy</button>
+        </div>
+
+        <figure class="demo">
+          <img src="assets/demo.gif?v=1" alt="Installing Claude OpenRouter, searching models, and adding favorites to Claude Code">
+          <figcaption>Install · index · search · multi-select · native <code>/model</code></figcaption>
+        </figure>
+
+        <p class="usage">
+          Run <code>clor search claude</code> to search the live catalog,
+          <code>clor select</code> to choose favorites, and then switch normally
+          with <code>/model</code> inside Claude Code.
+        </p>
+
+        <div class="note">
+          Your OpenRouter key stays in a local mode-0600 credential file. Reset
+          every setting owned by the tool with <code>clor reset</code>.
+        </div>
+      </main>
+
+      <footer>
+        <span>MIT · Independent project</span>
+        <a href="install.sh">View installer</a>
+      </footer>
+    </div>
+    <script src="assets/site.js?v=1"></script>
+  </body>
+</html>
