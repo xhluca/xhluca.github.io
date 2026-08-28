@@ -24,7 +24,7 @@ if (demoMount && window.AsciinemaPlayer) {
   let playing = true;
   demoMount.textContent = "";
 
-  const player = window.AsciinemaPlayer.create("assets/demo.cast?v=7", demoMount, {
+  const player = window.AsciinemaPlayer.create("assets/demo.cast?v=8", demoMount, {
     autoPlay: true,
     controls: true,
     fit: "both",
